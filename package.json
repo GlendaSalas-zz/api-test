@@ -1,0 +1,48 @@
+{
+	"name": "test",
+	"version": "1.0.0",
+	"description": "Test for endpoints in nodejs",
+	"main": "server/app.js",
+	"scripts": {
+		"clean": "rm -rf build && mkdir build",
+		"build": "npm run clean && babel -d ./build ./server -s",
+		"start": "npm run build && node ./build/app.js",
+		"watch": "babel-node --presets=env -- ./server/app.js",
+		"dev": "nodemon --exec npm run watch",
+		"test": "SET NODE_EN=test || export NODE_ENV=test"
+	},
+	"author": "Glenda Salas",
+	"license": "ISC",
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:GlendaSalas/test.git"
+	},
+	"dependencies": {
+		"babel-cli": "^6.26.0",
+		"babel-plugin-transform-object-rest-spread": "^6.26.0",
+		"babel-polyfill": "^6.26.0",
+		"babel-preset-env": "^1.7.0",
+		"body-parser": "^1.18.3",
+		"express": "^4.16.4",
+		"lodash": "^4.17.11",
+		"mongodb": "^3.1.13",
+		"mongoose": "^5.4.14",
+		"mongoose-deep-populate": "^3.1.1",
+		"mongoose-int32": "^0.3.1",
+		"mongoose-mongodb-errors": "0.0.2",
+		"mongoose-paginate": "^5.0.3",
+		"nodemon": "^1.18.10"
+	},
+	"devDependencies": {
+		"eslint": "^5.14.1",
+		"eslint-config-airbnb": "^17.1.0",
+		"eslint-plugin-import": "^2.16.0",
+		"eslint-plugin-jsx-a11y": "^6.2.1",
+		"eslint-plugin-react": "^7.12.4",
+		"gitbook-plugin-api": "^1.1.0",
+		"gitbook-plugin-api-mod": "^1.0.4",
+		"gitbook-plugin-expandable-chapters": "^0.2.0",
+		"gitbook-plugin-theme-api": "^1.1.2",
+		"gitbook-plugin-theme-gestalt": "^1.0.7"
+	}
+}

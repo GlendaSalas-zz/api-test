@@ -1,0 +1,48 @@
+{
+    "gitbook": ">=2.6.9",
+    "structure": {
+      "summary": "SUMMARY.md",
+      "readme": "README.md"
+    },
+    "title": "TEST API",
+    "description": "API",
+    "author":"Glenda Salas Alonso",
+    "plugins": ["expandable-chapters", "theme-gestalt", "theme-default", "-sharing", "api-mod","theme-api"],
+    "pluginsConfig": {
+      "theme-gestalt": {
+        "excludeDefaultStyles": false
+      },
+      "fontSettings": {
+          "size": 8
+      },
+      "api-mod": {
+        "expanded": true,
+        "url-break-line-indent-spaces": 4
+      },
+      "theme-api": {
+        "theme": "dark",
+        "split": true,
+        "languages": [
+        {
+          "lang": "js",
+          "name": "JavaScript",
+          "default": true
+        },
+        {
+          "lang": "go",
+          "name": "Go"
+        } ]
+      }
+    },
+    "variables": {
+      "apiUrl": ""
+    },
+    "pdf":{
+      "fontSize":8
+    },
+    "links": {
+        "sidebar": {  }
+    },
+    "height":500,
+    "widht":500
+}
